@@ -54,7 +54,7 @@ if(!function_exists('optionsframework_options')) {
 
 			$options['links_color_hover'] = array(
 								"id" => "links_color_hover",
-								"std" => "#ea8e8a");
+								"std" => "#0060ae");
 
 			$options['google_mixed_3'] = array(
 								'id' => 'google_mixed_3',

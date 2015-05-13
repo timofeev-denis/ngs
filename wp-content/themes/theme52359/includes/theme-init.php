@@ -15,7 +15,7 @@ if ( !function_exists( 'cherry_child_setup' ) ) :
 		add_image_size( 'slider-thumb', 100, 50, true ); // Slider Small Thumbnail
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		//add_theme_support( 'automatic-feed-links' );
 
 		// Add custom menu support.
 		add_theme_support( 'menus' );

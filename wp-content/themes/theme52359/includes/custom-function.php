@@ -11,7 +11,10 @@
 	    $params['height'] = '"56.45669291338583%"';
 	return $params;
 	}
-
+	add_filter( 'cherry_layout_content_column', 'cherry_child_layout_content_column' );
+	function cherry_child_layout_content_column( $class ) {
+		return 'span12';
+	}
 // Spacer
 if (!function_exists('spacer_shortcode')) {
 	function spacer_shortcode( $atts, $content = null, $shortcodename = '' ) {
@@ -177,17 +180,12 @@ if (!function_exists('posts_grid_shortcode')) {
 				}
 
 				$output .= '<li class="'. $spans .' list-item-'.$count.'">';
-				if($type !== 'team'){
-				$output .= '<h5><a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
-						$output .= get_the_title($post_id);
-					$output .= '</a></h5>';
-				}
 
 					if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
 
 						$prettyType = 'prettyPhoto-'.$rand;
 
-						$output .= '<figure class="featured-thumbnail thumbnail">';
+						$output .= '<figure class="featured-thumbnail thumbnail">1';
 						$output .= '<a href="'.$url.'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
 						$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
 						$output .= '<span class="zoom-icon"></span></a></figure>';
@@ -222,26 +220,26 @@ if (!function_exists('posts_grid_shortcode')) {
 								if ( $k == 0 ) {
 									if (has_post_thumbnail($post_id)) {
 										$output .= '<figure class="featured-thumbnail thumbnail">';
-										$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+										$output .= '<a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
 										$output .= '<img src="'.$image.'" alt="'.get_the_title($post_id).'" />';
 									} else {
-										$output .= '<figure class="featured-thumbnail thumbnail">';
+										$output .= '<figure class="featured-thumbnail thumbnail">3';
 										$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
 										$output .= '<img  src="'.$img.'" alt="'.get_the_title($post_id).'" />';
 									}
 								} else {
-									$output .= '<figure class="featured-thumbnail thumbnail" style="display:none;">';
+									$output .= '<figure class="featured-thumbnail thumbnail" style="display:none;">4';
 									$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
 								}
-								$output .= '<span class="zoom-icon"></span></a></figure>';
+								$output .= '</a></figure>';
 								$k++;
 							}
 						} elseif (has_post_thumbnail($post_id)) {
 							$prettyType = 'prettyPhoto-'.$rand;
 							$output .= '<figure class="featured-thumbnail thumbnail">';
-							$output .= '<a href="'.$url.'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+							$output .= '<a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
 							$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
-							$output .= '<span class="zoom-icon"></span></a></figure>';
+							$output .= '</a></figure>';
 						}
 					} else {
 
@@ -250,6 +248,13 @@ if (!function_exists('posts_grid_shortcode')) {
 						$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
 						$output .= '</a></figure>';
 					}
+					
+					$output .= '<div class="clear"></div>';
+				if($type !== 'team'){
+				$output .= '<h5><center><a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
+						$output .= get_the_title($post_id);
+					$output .= '</a></center></h5>';
+				}
 
 
 					$output .= '<div class="clear"></div>';
