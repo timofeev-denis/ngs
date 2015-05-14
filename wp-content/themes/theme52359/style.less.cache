@@ -874,4 +874,4 @@ body { font-weight:300 !important; }
 		line-height:40px;
 	}
 }
-";s:5:"files";a:3:{s:77:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\style.less";i:1431544732;s:96:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\bootstrap\less\variables.less";i:1431545022;s:93:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\bootstrap\less\mixins.less";i:1431180071;}s:7:"updated";i:1431545767;}
+";s:5:"files";a:3:{s:77:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\style.less";i:1431544732;s:96:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\bootstrap\less\variables.less";i:1431545022;s:93:"C:\OpenServer\domains\ngsgroup\htdocs\wp-content\themes\theme52359\bootstrap\less\mixins.less";i:1431180071;}s:7:"updated";i:1431614315;}
