@@ -8,7 +8,7 @@
 	</div>
 <?php } ?>	
 <div class="" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
-	<?php get_template_part("static/static-logo"); ?>
+	<?php //get_template_part("static/static-logo"); ?>
 </div>
 <div class="row copyright">
 	<div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-footer-text.php">
@@ -19,3 +19,6 @@
 	</div>
 
 </div>
+<?php if( $post->post_name == "contacts" ) { ?>
+<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/js/map.js"></script>
+<?php } ?>
